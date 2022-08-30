@@ -5,11 +5,12 @@ pipeline{
           steps{
            git 'https://github.com/baji2110951/maven.git'
           }
+        }
          stage(build){
           steps{
            sh 'mvn package'    
           }
          }
-        }
+        
      }
 }
