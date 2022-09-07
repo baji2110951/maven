@@ -25,5 +25,8 @@ pipeline{
                   sh 'docker push baji21109/my:2.0'     
                  }
            }
+           stage(deploy){
+            sh 'docker stack deploy -c stack.yaml my_stack'     
+           }
      }
 }
