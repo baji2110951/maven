@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  tom:
+    image: baji21109/my:2.0
+   ports:
+    - 2020:8080
+   deploy:
+    replicas: 3
+   volumes:
+    - my_volume:/opt/tomcat/webapps
+
+volumes:
+ my_volume:
+   external: true
