@@ -26,7 +26,9 @@ pipeline{
                  }
            }
            stage(deploy){
-            sh 'docker stack deploy -c stack.yaml my_stack'     
+                 steps{
+            sh 'docker stack deploy -c stack.yaml my_stack'    
+                 }
            }
      }
 }
